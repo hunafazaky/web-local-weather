@@ -50,7 +50,9 @@ main {
   border: 2px solid var(--color-accent);
   border-radius: var(--radius);
   background-color: var(--color-accent-bg);
+  margin-bottom: 1rem;
 }
+
 
 .weather-data {
   display: grid;
@@ -70,11 +72,15 @@ main {
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: var(--color-accent);
+  align-self: center;
 }
 
 .data-row dd {
   color: var(--color-ink);
   font-weight: 500;
+  margin: 0;
+  padding: 0;
+  align-self: center;
 }
 
 .temperature {

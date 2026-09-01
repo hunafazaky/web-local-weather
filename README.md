@@ -1,4 +1,4 @@
-# Local Weather
+# Local Weather App
 
 Shows current weather conditions for your browser's location, with a click-to-toggle
 between Celsius and Fahrenheit.
