@@ -1,13 +1,57 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hunafa Zaky | Local Weather App</title>
+    <title>Local Weather</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles/tokens.css" />
+    <link rel="stylesheet" href="./styles/base.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
+    <main>
+      <h1 id="main-title">Local Weather</h1>
+      <p class="subtitle">Uses your browser's location to show current conditions.</p>
+
+      <article id="weather-card">
+        <img id="weather-icon" class="weather-icon" alt="" hidden />
+
+        <dl class="weather-data">
+          <div class="data-row">
+            <dt>Location</dt>
+            <dd id="location">: —</dd>
+          </div>
+          <div class="data-row">
+            <dt>Weather</dt>
+            <dd id="condition">: —</dd>
+          </div>
+          <div class="data-row">
+            <dt>Temp</dt>
+            <dd
+              id="temperature"
+              class="temperature"
+              tabindex="0"
+              role="button"
+              aria-label="Temperature, click to switch between Celsius and Fahrenheit"
+            >
+              : —
+            </dd>
+            <p class="temp-hint">tap to switch °C / °F</p>
+          </div>
+        </dl>
+      </article>
+
+      <p id="status-message" aria-live="polite"></p>
+    </main>
+
+    <script type="module" src="./scripts/main.js"></script>
   </body>
 </html>
